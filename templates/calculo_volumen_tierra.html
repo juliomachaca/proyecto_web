@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Volúmenes de Movimiento de Tierra</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Cálculo de Volúmenes de Movimiento de Tierra</h1>
+    <form method="POST">
+        <label for="area_corte">Área de corte (m²):</label>
+        <input type="number" step="0.1" id="area_corte" name="area_corte" required><br><br>
+
+        <label for="area_relleno">Área de relleno (m²):</label>
+        <input type="number" step="0.1" id="area_relleno" name="area_relleno" required><br><br>
+
+        <label for="longitud_tramo">Longitud del tramo (m):</label>
+        <input type="number" step="0.1" id="longitud_tramo" name="longitud_tramo" required><br><br>
+
+        <label for="altura_corte">Altura de corte (m):</label>
+        <input type="number" step="0.1" id="altura_corte" name="altura_corte" required><br><br>
+
+        <label for="altura_rellenar">Altura de relleno (m):</label>
+        <input type="number" step="0.1" id="altura_rellenar" name="altura_rellenar" required><br><br>
+
+        <label for="costo_por_m3">Costo por m³ (monedas):</label>
+        <input type="number" step="0.1" id="costo_por_m3" name="costo_por_m3" required><br><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+    <a href="/">Volver al Menú Principal</a>
+</body>
+</html>

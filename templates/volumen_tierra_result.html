@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del Cálculo de Movimiento de Tierra</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Resultado del Cálculo de Movimiento de Tierra</h1>
+        <div class="result-text">
+            <p><strong>Volumen de tierra a excavar (corte):</strong> {{ volumen_corte }} m³</p>
+            <p><strong>Volumen de relleno (terraplén):</strong> {{ volumen_relleno }} m³</p>
+            <p><strong>Costo estimado de movimiento de tierras:</strong> {{ costo_total }} monedas</p>
+        </div>
+        <h2>Gráfico del Movimiento de Tierra</h2>
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Gráfico del movimiento de tierra">
+        <div>
+            <a href="/calculo_volumen_tierra" class="button-secondary">Volver al formulario</a>
+            <a href="/" class="button-secondary">Volver al Menú Principal</a>
+        </div>
+    </div>
+</body>
+</html>

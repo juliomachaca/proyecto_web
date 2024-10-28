@@ -1,0 +1,23 @@
+<!-- clasificacion_orografia.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificación por Orografía</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Clasificación de Carreteras por Orografía</h1>
+    <form method="POST">
+        <label for="pendiente_trans">Ingrese la pendiente transversal (%):</label>
+        <input type="number" step="0.1" id="pendiente_trans" name="pendiente_trans" required><br><br>
+
+        <label for="pendiente_long">Ingrese la pendiente longitudinal (%):</label>
+        <input type="number" step="0.1" id="pendiente_long" name="pendiente_long" required><br><br>
+
+        <button type="submit">Clasificar</button>
+    </form>
+    <a href="/">Volver al Menú Principal</a>
+</body>
+</html>

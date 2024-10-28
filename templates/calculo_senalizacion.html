@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Señalización y Seguridad Vial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Señalización y Seguridad Vial</h1>
+    <form method="POST">
+        <label for="velocidad">Velocidad de diseño (km/h):</label>
+        <input type="number" step="0.1" id="velocidad" name="velocidad" required><br><br>
+
+        <label for="tramos_criticos">¿Hay tramos críticos? (si/no):</label>
+        <input type="text" id="tramos_criticos" name="tramos_criticos" required><br><br>
+
+        <label for="volumen_trafico">Volumen de tráfico (vehículos/hora):</label>
+        <input type="number" id="volumen_trafico" name="volumen_trafico" required><br><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+    <a href="/">Volver al Menú Principal</a>
+</body>
+</html>

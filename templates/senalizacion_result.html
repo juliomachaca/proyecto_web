@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Señalización y Seguridad Vial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Resultado de Señalización y Seguridad Vial</h1>
+        <h2>Recomendaciones:</h2>
+        <div class="result-text">
+            <ul>
+                {% for recomendacion in recomendaciones %}
+                    <li>{{ recomendacion }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <h2>Gráfico de Datos de Seguridad Vial</h2>
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Gráfico de datos de señalización y seguridad vial">
+        <div>
+            <a href="/calculo_senalizacion" class="button-secondary">Volver al formulario</a>
+            <a href="/" class="button-secondary">Volver al Menú Principal</a>
+        </div>
+    </div>
+</body>
+</html>

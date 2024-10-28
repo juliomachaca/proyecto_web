@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del Diseño Geométrico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Resultado del Diseño Geométrico</h1>
+    <div class="result-container">
+        <p><strong>Peralte:</strong> {{ peralte }}%</p>
+        <p><strong>Radio mínimo:</strong> {{ radio_minimo }} metros</p>
+        <p><strong>Distancia de frenado:</strong> {{ distancia_frenado }} metros</p>
+        <p><strong>Longitud de transición:</strong> {{ longitud_transicion }} metros</p>
+        <p><strong>Distancia de visibilidad:</strong> {{ visibilidad }} metros</p>
+        <h2>Gráfico del Diseño Geométrico</h2>
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Gráfico del diseño geométrico">
+    </div>
+    <a href="/diseno_geometrico">Volver al formulario</a> |
+    <a href="/">Volver al Menú Principal</a>
+</body>
+</html>

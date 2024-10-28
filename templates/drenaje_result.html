@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del Diseño de Drenaje</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Resultado del Diseño de Drenaje</h1>
+        <div class="result-text">
+            <p><strong>Caudal de diseño:</strong> {{ caudal_diseño }} l/s</p>
+            <p><strong>Diámetro de tubería necesario:</strong> {{ diametro_necesario }} m</p>
+            <p><strong>Capacidad del sistema de drenaje:</strong> {{ capacidad_sistema }} l/s</p>
+            <p><strong>Análisis de inundaciones:</strong> {{ riesgo_inundacion }}</p>
+        </div>
+        <h2>Gráfico del Diseño de Drenaje</h2>
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Gráfico del diseño de drenaje">
+        <div>
+            <a href="/diseno_drenaje" class="button-secondary">Volver al formulario</a>
+            <a href="/" class="button-secondary">Volver al Menú Principal</a>
+        </div>
+    </div>
+</body>
+</html>

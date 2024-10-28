@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Clasificación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Resultado de Clasificación</h1>
+        <div class="result-text">
+            <p><strong>Clasificación:</strong> {{ clasificacion }}</p>
+            <p><strong>Características:</strong></p>
+            <p>{{ caracteristicas }}</p>
+        </div>
+        <div>
+            <a href="/clasificacion_carreteras/demanda" class="button-secondary">Volver al formulario</a>
+            <a href="/" class="button-secondary">Volver al Menú Principal</a>
+        </div>
+    </div>
+</body>
+</html>

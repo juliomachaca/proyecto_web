@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Geométrico de Carreteras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Diseño Geométrico de Carreteras</h1>
+    <form method="POST">
+        <label for="velocidad_diseño">Velocidad de diseño (km/h):</label>
+        <input type="number" id="velocidad_diseño" name="velocidad_diseño" required><br><br>
+
+        <label for="radio_curva">Radio de la curva (m):</label>
+        <input type="number" id="radio_curva" name="radio_curva" required><br><br>
+
+        <label for="coef_friccion">Coeficiente de fricción:</label>
+        <input type="number" step="0.01" id="coef_friccion" name="coef_friccion" required><br><br>
+
+        <label for="pendiente_longitudinal">Pendiente longitudinal (%):</label>
+        <input type="number" step="0.01" id="pendiente_longitudinal" name="pendiente_longitudinal" required><br><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+    <a href="/">Volver al Menú Principal</a>
+</body>
+</html>

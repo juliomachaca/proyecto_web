@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Estabilidad de Taludes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Análisis de Estabilidad de Taludes</h1>
+    <form method="POST">
+        <label for="angulo_talud">Ángulo del talud (grados):</label>
+        <input type="number" step="0.1" id="angulo_talud" name="angulo_talud" required><br><br>
+
+        <label for="tipo_suelo">Tipo de suelo (arcilla/arena/roca):</label>
+        <input type="text" id="tipo_suelo" name="tipo_suelo" required><br><br>
+
+        <label for="cohesion">Cohesión del suelo (kPa):</label>
+        <input type="number" step="0.1" id="cohesion" name="cohesion" required><br><br>
+
+        <label for="angulo_friccion">Ángulo de fricción (grados):</label>
+        <input type="number" step="0.1" id="angulo_friccion" name="angulo_friccion" required><br><br>
+
+        <label for="carga_externa">Cargas externas (kN/m²):</label>
+        <input type="number" step="0.1" id="carga_externa" name="carga_externa" required><br><br>
+
+        <label for="condiciones_extremas">Condiciones extremas (si/no):</label>
+        <input type="text" id="condiciones_extremas" name="condiciones_extremas" required><br><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+    <a href="/">Volver al Menú Principal</a>
+</body>
+</html>

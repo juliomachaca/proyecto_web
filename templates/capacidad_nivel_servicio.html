@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacidad y Nivel de Servicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Capacidad y Nivel de Servicio</h1>
+    <form method="POST">
+        <label for="volumen_trafico">Volumen de tráfico (vehículos/hora):</label>
+        <input type="number" id="volumen_trafico" name="volumen_trafico" required><br><br>
+
+        <label for="ancho_carril">Ancho del carril (m):</label>
+        <input type="number" step="0.1" id="ancho_carril" name="ancho_carril" required><br><br>
+
+        <label for="tipo_vehiculo">Tipo de vehículo (liviano/pesado):</label>
+        <input type="text" id="tipo_vehiculo" name="tipo_vehiculo" required><br><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+    <a href="/">Volver al Menú Principal</a>
+</body>
+</html>

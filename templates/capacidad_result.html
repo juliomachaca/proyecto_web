@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Capacidad y Nivel de Servicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Resultado de Capacidad y Nivel de Servicio</h1>
+        <div class="result-text">
+            <p><strong>Nivel de servicio:</strong> {{ nivel_servicio }}</p>
+            <p><strong>Capacidad:</strong> {{ capacidad }} vehículos/hora</p>
+        </div>
+        <h2>Gráfico del Nivel de Servicio</h2>
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Gráfico del nivel de servicio">
+        <div>
+            <a href="/capacidad_nivel_servicio" class="button-secondary">Volver al formulario</a>
+            <a href="/" class="button-secondary">Volver al Menú Principal</a>
+        </div>
+    </div>
+</body>
+</html>

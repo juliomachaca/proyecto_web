@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal - Cálculos de Carreteras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Bienvenido a la Aplicación Web para Cálculos de Carreteras</h1>
+    <ul>
+        <!-- Usa url_for para todas las rutas, incluyendo la de orografía -->
+        <li><a href="{{ url_for('clasificacion_demanda') }}">Clasificación de Carreteras por Demanda</a></li>
+        <li><a href="{{ url_for('diseno_geometrico') }}">Diseño Geométrico de Carreteras</a></li>
+        <li><a href="{{ url_for('capacidad_nivel_servicio') }}">Capacidad y Nivel de Servicio</a></li>
+        <li><a href="{{ url_for('pavimentos_diseno_estructuras') }}">Pavimentos y Diseño de Estructuras</a></li>
+        <li><a href="{{ url_for('diseno_drenaje') }}">Diseño de Drenaje</a></li>
+        <li><a href="{{ url_for('analisis_estabilidad_taludes') }}">Análisis de Estabilidad de Taludes</a></li>
+        <li><a href="{{ url_for('calculo_volumen_tierra') }}">Cálculo de Volúmenes de Movimiento de Tierra</a></li>
+        <li><a href="{{ url_for('calculo_distancias') }}">Cálculo de Distancias de Frenado y Visibilidad</a></li>
+        <li><a href="{{ url_for('calculo_senalizacion') }}">Señalización y Seguridad Vial</a></li>
+    </ul>
+</body>
+</html>
